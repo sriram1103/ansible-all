@@ -1,0 +1,43 @@
+---
+- hosts: vagrant
+  tasks:
+    - name: one
+      command: echo one
+      tags:
+       - tag_1
+       - tag_odd
+      
+
+- hosts: vagrant
+  tasks:
+    - name: twp
+      command: echo two
+      tags:
+       - tag_2
+       - tag_even
+
+
+- hosts: vagrant
+  tasks:
+    - name: three
+      command: echo three
+      tags:
+       - tag_3
+       - tag_odd
+       - always
+
+
+- hosts: vagrant
+  tasks:
+    - name: four
+      command: echo four
+      tags:
+       - tag_4
+       - tag_odd
+
+    - name: five
+      command: echo five
+      tags:
+       - tag_4
+       - tag_even
+       - always
