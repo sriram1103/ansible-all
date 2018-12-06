@@ -1,0 +1,30 @@
+---
+- hosts: all
+  tasks: 
+    - name: "Test all hosts"
+      ping:
+
+- hosts: odd:even
+  tasks:
+    - name: "Test odd and even"
+      ping:
+
+- hosts: prime:!square
+  tasks:
+    - name: "prime and not in square"
+      ping:
+
+- hosts: prime:&even
+  tasks:
+    - name: "Test prime and in even"
+      ping:
+
+- hosts: prime:&even:!odd
+  tasks:
+    - name: "Test prime and in even and not in odd"
+      ping:
+
+- hosts: sqrprm[0]
+  tasks:
+    - name: "Test sqrprm[0]"
+      ping:

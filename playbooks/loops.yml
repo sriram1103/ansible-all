@@ -1,0 +1,13 @@
+---
+- hosts: vagrant
+  vars:
+  - var: [1,2,3,4,5]
+  tasks:
+  - name: Test loops
+    command: echo "{{ item }}"
+    loop: "{{ groups['all'] }}"
+
+  - name: Test with_items
+    command: echo "{{ item }}"
+    with_items:
+    - "{{ groups['all'] }}"

@@ -1,0 +1,12 @@
+---
+- hosts: vagrant
+  pre_tasks:
+    - name: "Pre task"
+      command: echo pre
+
+  roles:
+    - role1
+
+  post_tasks:
+    - name: "Post task"
+      command: echo post

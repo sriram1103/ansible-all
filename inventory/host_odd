@@ -1,0 +1,4 @@
+[odd]
+system1 ansible_host=127.0.0.1
+system3 ansible_host=127.0.0.1
+system5 ansible_host=127.0.0.1

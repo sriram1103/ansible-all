@@ -1,0 +1,6 @@
+- name : test role3
+  command: echo "role3"
+
+- name : include role2
+  include_role: 
+      name: role2

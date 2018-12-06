@@ -1,0 +1,4 @@
+- name : test role
+  command: echo test
+  tags: 
+   - even

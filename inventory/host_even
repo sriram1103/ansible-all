@@ -1,0 +1,4 @@
+[even]
+system2 ansible_host=127.0.0.1
+system4 ansible_host=127.0.0.1
+system6 ansible_host=127.0.0.1

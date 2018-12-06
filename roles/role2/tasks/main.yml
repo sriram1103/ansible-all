@@ -1,0 +1,4 @@
+- name : test role
+  command: echo "{{ default_var.dict }}" "{{ var }}"
+  notify:
+  - handler two

@@ -1,0 +1,3 @@
+- name: handler1
+  command: echo handler1
+  listen: handler one

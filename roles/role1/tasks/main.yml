@@ -1,0 +1,6 @@
+- name : test role
+  command: echo "{{ default_var }}" "{{ var }}"
+  notify:
+  - handler1
+  tags: 
+   - even
