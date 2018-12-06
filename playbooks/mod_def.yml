@@ -1,0 +1,16 @@
+- hosts: localhost
+  module_defaults:
+    file:
+      owner: root
+      group: root
+      mode: 0755
+  tasks:
+    - file:
+        state: touch
+        path: /tmp/file1
+    - file:
+        state: touch
+        path: /tmp/file2
+    - file:
+        state: touch
+        path: /tmp/file3

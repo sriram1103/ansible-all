@@ -1,0 +1,11 @@
+- name: create
+  command: echo created
+- name: template
+  command: echo template
+- name: copied
+  command: echo copied
+  listen: copy
+- name: removed
+  command: echo removed
+  listen: remove
+  

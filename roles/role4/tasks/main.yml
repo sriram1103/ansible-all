@@ -1,4 +1,39 @@
-- name : test role
-  command: echo test
-  tags: 
-   - even
+- name: create directory
+  file:
+    path: /tmp/temp
+    state: directory
+    mode: 0755
+  notify:
+   - create
+
+- name : test template
+  template:
+   src: template.j2
+   dest: "{{ temp_path }}"
+  notify:
+   - template
+
+- name: copy
+  copy: 
+   src: config
+   dest: "{{ file.path }}"
+  notify:
+   - copy
+
+    
+- name: file
+  file:
+    src: "{{ file.path }}"
+    dest: "{{ file.link }}"
+    owner: "{{ file.owner }}"
+    group: "{{ file.group }}"
+    state: link
+  notify:
+   - create
+
+- name: Remove directory
+  file:
+    path: /tmp/temp
+    state: absent
+  notify:
+   - remove

@@ -1,0 +1,8 @@
+---
+temp_path: /tmp/temp/temp
+file:
+ path: /tmp/temp/file
+ link: /tmp/temp/link
+ owner: vagrant
+ group: vagrant
+ mode: 755

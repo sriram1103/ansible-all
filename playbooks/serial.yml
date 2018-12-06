@@ -1,0 +1,11 @@
+---
+- hosts: all
+  serial: 2 
+  tasks:
+  - name: Always
+    command: echo "always"
+  
+  - name: Once
+    command: echo "Once"
+    run_once: true
+    delegate_to: system2
