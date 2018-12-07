@@ -1,0 +1,10 @@
+---
+- hosts: vagrant
+  tasks:
+   - name: Test register
+     command: hostname
+     register: result
+
+   - name: Test debug 
+     debug:
+       var: result
