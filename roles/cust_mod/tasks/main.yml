@@ -1,0 +1,16 @@
+- name : test role
+  command: echo "{{ default_var.dict }}" "{{ var }}"
+  notify:
+  - handler two
+
+- name: test module
+  time:
+  register: op
+
+- name: check output
+  debug: 
+    var: op
+
+- name: check dir
+  dir:
+    path: '/tmp/file'

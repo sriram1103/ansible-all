@@ -1,0 +1,4 @@
+---
+default_var:
+  string: "var"
+  dict: { key: "value"}
