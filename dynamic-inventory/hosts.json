@@ -1,0 +1,21 @@
+{
+    "groups":{
+        "total": {
+            "groups": ["odd","even"]
+        },
+        "odd": {
+            "hosts": ["system1"]
+        },
+        "even": {
+            "hosts": ["system2"]
+        }
+    },
+    "hosts": {
+        "system1": {
+            "ansible_host": "127.0.0.1"
+        },
+        "system2": {
+            "ansible_host": "127.0.0.1"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+--- 
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: setup
+    setup:
+    register: result
+  - name: output
+    debug:
+     var: result.ansible_facts.ansible_lvm.lvs
+  
