@@ -1,5 +1,5 @@
 ---
 - hosts: all
   roles:
-   - role: role2
+   - role: dep_role
      when: "'local' in inventory_hostname"  

@@ -1,4 +1,4 @@
 ---
 - hosts: vagrant
   roles:
-    - role3
+   - template
