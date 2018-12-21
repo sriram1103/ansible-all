@@ -2,3 +2,6 @@
   command: echo "{{ default_var.dict }}" "{{ var }}"
   notify:
   - handler two
+  
+- name: test script
+  script: test.sh "sriram"
